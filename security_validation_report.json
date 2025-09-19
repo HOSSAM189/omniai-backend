@@ -1,0 +1,130 @@
+{
+  "summary": {
+    "total_tests": 19,
+    "passed_tests": 13,
+    "failed_tests": 6,
+    "pass_rate": 68.42105263157895,
+    "status": "NEEDS IMPROVEMENT"
+  },
+  "test_results": [
+    {
+      "test": "Health Endpoint",
+      "passed": true,
+      "details": "Status: 200, Currency: USD",
+      "timestamp": "2025-09-18T04:49:31.775419"
+    },
+    {
+      "test": "USD Configuration",
+      "passed": true,
+      "details": "Status: 200, USD Only: True, Currency: USD",
+      "timestamp": "2025-09-18T04:49:31.778685"
+    },
+    {
+      "test": "Pricing Information",
+      "passed": false,
+      "details": "Status: 200, Currency: Unknown, Plans: 0",
+      "timestamp": "2025-09-18T04:49:31.784184"
+    },
+    {
+      "test": "Security Headers",
+      "passed": true,
+      "details": "Security headers present: 3/3",
+      "timestamp": "2025-09-18T04:49:31.786803"
+    },
+    {
+      "test": "CORS Configuration",
+      "passed": true,
+      "details": "CORS headers present: 1/2",
+      "timestamp": "2025-09-18T04:49:31.786824"
+    },
+    {
+      "test": "Auth Required: Validate Amount",
+      "passed": false,
+      "details": "Status: 200 (should be 401/403/405)",
+      "timestamp": "2025-09-18T04:49:31.792277"
+    },
+    {
+      "test": "Auth Required: Subscription Status",
+      "passed": true,
+      "details": "Status: 401 (should be 401/403/405)",
+      "timestamp": "2025-09-18T04:49:31.794931"
+    },
+    {
+      "test": "Auth Required: Create Checkout Session",
+      "passed": false,
+      "details": "Status: 200 (should be 401/403/405)",
+      "timestamp": "2025-09-18T04:49:31.797583"
+    },
+    {
+      "test": "Auth Required: Payment History",
+      "passed": true,
+      "details": "Status: 401 (should be 401/403/405)",
+      "timestamp": "2025-09-18T04:49:31.800099"
+    },
+    {
+      "test": "Webhook Health",
+      "passed": true,
+      "details": "Status: 200, USD validation: True",
+      "timestamp": "2025-09-18T04:49:31.802662"
+    },
+    {
+      "test": "Webhook Signature Required",
+      "passed": true,
+      "details": "Status: 400 (should be 400 - missing signature)",
+      "timestamp": "2025-09-18T04:49:31.805277"
+    },
+    {
+      "test": "Invalid Signature Rejection",
+      "passed": true,
+      "details": "Status: 400 (should reject invalid signature)",
+      "timestamp": "2025-09-18T04:49:31.807612"
+    },
+    {
+      "test": "Invalid Endpoint",
+      "passed": false,
+      "details": "Status: 200 (should be 404)",
+      "timestamp": "2025-09-18T04:49:31.810210"
+    },
+    {
+      "test": "Invalid JSON Handling",
+      "passed": true,
+      "details": "Status: 400 (should be 400/422)",
+      "timestamp": "2025-09-18T04:49:31.812518"
+    },
+    {
+      "test": "Error Response Format",
+      "passed": false,
+      "details": "Unexpected status: 200",
+      "timestamp": "2025-09-18T04:49:31.815040"
+    },
+    {
+      "test": "Rate Limiting",
+      "passed": true,
+      "details": "Successful: 20/20, Duration: 1.05s",
+      "timestamp": "2025-09-18T04:49:32.869519"
+    },
+    {
+      "test": "Admin Only: Stats",
+      "passed": true,
+      "details": "Status: 401 (should be 401/403/405)",
+      "timestamp": "2025-09-18T04:49:32.871800"
+    },
+    {
+      "test": "Admin Only: Reset Stats",
+      "passed": false,
+      "details": "Status: 200 (should be 401/403/405)",
+      "timestamp": "2025-09-18T04:49:32.874332"
+    },
+    {
+      "test": "Admin Only: Events",
+      "passed": true,
+      "details": "Status: 401 (should be 401/403/405)",
+      "timestamp": "2025-09-18T04:49:32.876441"
+    }
+  ],
+  "timestamp": "2025-09-18T04:49:32.876754",
+  "recommendations": [
+    "Review and address failed security tests",
+    "Strengthen authentication mechanisms"
+  ]
+}

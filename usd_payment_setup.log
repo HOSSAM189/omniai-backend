@@ -1,0 +1,17 @@
+2025-09-18 00:31:50,134 - INFO - Starting USD payment system setup
+2025-09-18 00:31:51,092 - INFO - Starting USD payment configuration validation
+2025-09-18 00:31:51,413 - INFO - message='Request to Stripe api' method=get url=https://api.stripe.com/v1/account
+2025-09-18 00:31:51,545 - INFO - message='Stripe API response' path=https://api.stripe.com/v1/account response_code=401
+2025-09-18 00:31:51,545 - INFO - error_code=None error_message='Invalid API Key provided: sk_test_***********************here' error_param=None error_type=invalid_request_error message='Stripe v1 API error received'
+2025-09-18 00:31:51,546 - INFO - message='Request to Stripe api' method=get url=https://api.stripe.com/v1/account
+2025-09-18 00:31:51,577 - INFO - message='Stripe API response' path=https://api.stripe.com/v1/account response_code=401
+2025-09-18 00:31:51,577 - INFO - error_code=None error_message='Invalid API Key provided: sk_test_***********************here' error_param=None error_type=invalid_request_error message='Stripe v1 API error received'
+2025-09-18 00:31:51,578 - INFO - message='Request to Stripe api' method=post url=https://api.stripe.com/v1/prices
+2025-09-18 00:31:51,610 - INFO - message='Stripe API response' path=https://api.stripe.com/v1/prices response_code=401
+2025-09-18 00:31:51,610 - INFO - error_code=None error_message='Invalid API Key provided: sk_test_***********************here' error_param=None error_type=invalid_request_error message='Stripe v1 API error received'
+2025-09-18 00:31:51,610 - INFO - message='Request to Stripe api' method=get url=https://api.stripe.com/v1/webhook_endpoints?limit=10
+2025-09-18 00:31:51,642 - INFO - message='Stripe API response' path=https://api.stripe.com/v1/webhook_endpoints?limit=10 response_code=401
+2025-09-18 00:31:51,642 - INFO - error_code=None error_message='Invalid API Key provided: sk_test_***********************here' error_param=None error_type=invalid_request_error message='Stripe v1 API error received'
+2025-09-18 00:31:51,642 - INFO - USD payment validation completed: FAILED
+2025-09-18 00:31:52,021 - ERROR - Only USD transactions are supported. Received: EUR
+2025-09-18 00:31:52,030 - INFO - USD payment system setup completed: WITH ISSUES
