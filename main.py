@@ -38,3 +38,33 @@ def admin_login():
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port, debug=False)
+# Voice Agent endpoints
+@app.route('/api/ai/voice/config', methods=['GET'])
+def voice_config():
+    return jsonify({
+        'languages': [
+            {'code': 'en', 'name': 'English', 'flag': '🇺🇸'},
+            {'code': 'ar', 'name': 'Arabic', 'flag': '🇸🇦'},
+            {'code': 'ur', 'name': 'Urdu', 'flag': '🇵🇰'},
+            {'code': 'fr', 'name': 'French', 'flag': '🇫🇷'},
+            {'code': 'es', 'name': 'Spanish', 'flag': '🇪🇸'}
+        ],
+        'voices': ['female_voice', 'male_voice'],
+        'status': 'online'
+    })
+
+@app.route('/api/ai/voice/process', methods=['POST'])
+def voice_process():
+    data = request.get_json()
+    text = data.get('text', '')
+    language = data.get('language', 'en')
+    
+    # Simple voice response simulation
+    response_text = "Voice processing is working! I can help you with Islamic finance questions in multiple languages."
+    
+    return jsonify({
+        'success': True,
+        'response': response_text,
+        'language': language,
+        'audio_url': None  # In production, this would be actual audio
+    })
